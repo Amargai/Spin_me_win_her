@@ -1,5 +1,6 @@
+let rotation = 0;
+
 function spinWheel() {
-    console.log('Spin button clicked');
     const wheel = document.getElementById('wheel');
     const extraDegrees = Math.floor(5000 + Math.random() * 5000); // Random degree for spin
     rotation += extraDegrees;
@@ -8,7 +9,6 @@ function spinWheel() {
 
     // Calculate the stop position after the spin completes
     setTimeout(() => {
-        console.log('Wheel stopped');
         const actualRotation = rotation % 360;
         const sectorAngle = 360 / 6;
         const stopAngle = (360 - actualRotation) % 360;
